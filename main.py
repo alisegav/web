@@ -24,7 +24,7 @@ def load_user(user_id):
 def main():
     db_session.global_init("db/blogs.db")
     app.register_blueprint(news_api.blueprint)
-	if __name__ == '__main__':
+    if __name__ == '__main__':
         app.run()
 
 
