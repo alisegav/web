@@ -7,49 +7,52 @@
 {% if current_user.is_authenticated %}
 <div class="container">
   <div class="row">
-    <div class="col">
-      <div class="card" style="width: 18rem;">
+    <div class="col d-flex">
+      <div class="card my-2" style="width: 18rem;">
       <img src="https://images.fineartamerica.com/images-medium-large/1-algebra-formulas-close-up-fernando-barozza.jpg" width="200" height="200" class="card-img-top" alt="...">
-      <div class="card-body">
+      <div class="card-body d-flex flex-column">
       <h5 class="card-title">Алгебра</h5>
       <p class="card-text"> Перейдите, чтобы увидеть формулы по следующим темам: корни, степени и т.д.</p>
       <a href="/algebra" class="btn btn-primary">Открыть</a>
       </div>
     </div>
     </div>
-    <div class="col">
-      <div class="card" style="width: 18rem;">
+    <div class="col d-flex">
+      <div class="card my-2" style="width: 18rem;">
       <img src="http://mobimg.b-cdn.net/v3/fetch/1f/1f180176925e4a1e21df6f2b1d6c61dd.jpeg" width="200" height="200" class="card-img-top" alt="...">
-      <div class="card-body">
+      <div class="card-body d-flex flex-column">
       <h5 class="card-title">Геометрия</h5>
       <p class="card-text"> Перейдите, чтобы увидеть формулы по следующим темам: площади, тригонометрия и т.д.</p>
       <a href="/geometry" class="btn btn-primary">Открыть</a>
       </div>
     </div>
     </div>
-    <div class="col">
-      <div class="card" style="width: 18rem;">
+    <div class="col d-flex">
+      <div class="card my-2" style="width: 18rem;">
       <img src="https://i.pinimg.com/originals/a2/b4/17/a2b4177290db420359bf20b7cbc2df19.jpg" width="200" height="200" class="card-img-top" alt="...">
-      <div class="card-body">
+      <div class="card-body d-flex flex-column">
       <h5 class="card-title">Физика</h5>
       <p class="card-text"> Перейдите, чтобы увидеть формулы по следующим темам: силы, давление, энергии и т.д.</p>
       <a href="/physics" class="btn btn-primary">Открыть</a>
       </div>
     </div>
     </div>
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-      <div class="card-body">
+    <div class="col d-flex">
+      <div class="card my-2" style="width: 18rem;">
+      <div class="card-body d-flex flex-column">
       <h5 class="card-title">Собственные формулы</h5>
-      <p class="card-text"> Перейдите, чтобы увидеть свои формулы</p>
+      <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="photo">Выберите файл</label>
+            <input type="file" class="form-control-file" id="photo" name="file" accept="image/*">
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary">Отправить</button>
+        </div>
+      </form>
+      <div class="flex-grow-1"></div>
+      <p class="card-text mt-5"> Перейдите, чтобы увидеть свои формулы</p>
       <a href="/formuls" class="btn btn-primary">Открыть</a>
-        <form method="post" enctype="multipart/form-data">
-                               <div class="form-group">
-                                    <label for="photo">Выберите файл</label>
-                                    <input type="file" class="form-control-file" id="photo" name="file" accept="image/*">
-                                </div>
-                                <button class="btn btn-primary">Отправить</button>
-                            </form>
       </div>
     </div>
     </div>
