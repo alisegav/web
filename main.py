@@ -24,7 +24,8 @@ def load_user(user_id):
 def main():
     db_session.global_init("db/blogs.db")
     app.register_blueprint(news_api.blueprint)
-    app.run()
+	if __name__ == '__main__':
+        app.run()
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -127,5 +128,4 @@ def getImg(id):
         return response
     abort(404)
 
-if __name__ == '__main__':
-    main()
+main()
