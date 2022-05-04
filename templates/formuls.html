@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% for el in pictures %}
 <div class="row justify-content-center">
-    <img src="/img/{{el[0]}}" alt="Формула №{{el[0]}}" style="width: auto;">
+    <div class="col">
+        <div class="d-flex flex-wrap align-items-center justify-content-evenly">
+            {% for el in pictures %}
+            <img src="/img/{{el[0]}}" style="max-width: 100%; max-height: 50vh;" alt="Формула №{{el[0]}}">
+            {% endfor %}
+        </div>
+    </div>
 </div>
-{% endfor %}
 {% endblock %}
